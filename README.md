@@ -1,3 +1,3 @@
-The website is under development, sorry for let you guys waiting this slow process:
+The website is under development; sorry for letting you guys wait for this slow process:
 
 →  https://nikolai-misha.github.io/vie-learn/
