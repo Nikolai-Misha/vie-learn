@@ -22,7 +22,7 @@
     /* Toggle switch */
     --toggle-off-bg: #E5E7EB;
     --toggle-on-bg: #4B5EAA;
-    --toggle-knob-bg: #FFFFFF;
+    --toggle-knob-bg: #dbdbdb;
     --toggle-icon: #2C3E50;
     /* Search icon */
     --search-icon: #2C3E50;
@@ -35,7 +35,7 @@
     --header-bg: #2C3E50;
     --section-bg: #2C3E50;
     --card-bg: #34495E;
-    --text-primary: #F3F4F6;
+    --text-primary: #cfddfa;
     --text-secondary: #D1D9FF;
     --text-muted: #c6d6fa;
     --accent: #ffd284;
@@ -46,7 +46,7 @@
     --toggle-off-bg: #E5E7EB;
     --toggle-on-bg: #4B5EAA;
     --toggle-knob-bg: #FFFFFF;
-    --toggle-icon: #FEE2B3;
+    --toggle-icon: #ffe48b;
     /* Search icon */
     --search-icon: #F3F4F6;
     --search-icon-hover: #8b6c36;
@@ -344,7 +344,7 @@ button:hover i.fa-search {
 }
 
 [data-theme="dark"] .btn {
-    color: #E5E7EB; /* Màu chữ dịu hơn trong dark mode */
+    color: #4B5563; /* Màu chữ dịu hơn trong dark mode */
 }
 
 .btn:hover {
