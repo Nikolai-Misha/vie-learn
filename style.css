@@ -15,10 +15,10 @@
     --text-primary: #2C3E50;
     --text-secondary: #34495E;
     --text-muted: #7F8C8D;
-    --accent: #FEE2B3;
-    --accent-hover: #FFD700;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(0, 0, 0, 0.2);
+    --accent: #fad390;
+    --accent-hover: #f7e377;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.5);
     /* Toggle switch */
     --toggle-off-bg: #E5E7EB;
     --toggle-on-bg: #4B5EAA;
@@ -26,7 +26,7 @@
     --toggle-icon: #2C3E50;
     /* Search icon */
     --search-icon: #2C3E50;
-    --search-icon-hover: #FFFFFF;
+    --search-icon-hover: #8b6c36;
 }
 
 /* Dark Mode Colors */
@@ -37,9 +37,9 @@
     --card-bg: #34495E;
     --text-primary: #F3F4F6;
     --text-secondary: #D1D9FF;
-    --text-muted: #A3BFFA;
-    --accent: #FEE2B3;
-    --accent-hover: #FFD700;
+    --text-muted: #c6d6fa;
+    --accent: #ffd284;
+    --accent-hover: #f1d010;
     --shadow: rgba(0, 0, 0, 0.4);
     --shadow-hover: rgba(0, 0, 0, 0.6);
     /* Toggle switch */
@@ -49,12 +49,12 @@
     --toggle-icon: #FEE2B3;
     /* Search icon */
     --search-icon: #F3F4F6;
-    --search-icon-hover: #FEE2B3;
+    --search-icon-hover: #8b6c36;
 }
 
 /* Thêm transition cho màu sắc, shadow và transform */
 body, header, section, .feature-card, button, .btn, footer, .switch {
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 /* General Styles */
@@ -250,7 +250,7 @@ section {
 #search-bar {
     padding: 0.8rem;
     width: 50%;
-    max-width: 400px;
+    max-width: 500px;
     border: none;
     border-radius: 25px;
     font-size: 1rem;
@@ -325,8 +325,8 @@ button:hover i.fa-search {
 }
 
 .feature-card p {
-    font-size: 0.95rem;
-    font-weight: 400;
+    font-size: 0.90rem;
+    font-weight: 515;
     color: var(--text-muted);
 }
 
