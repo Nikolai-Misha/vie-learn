@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.STUDY</title>
+    <link rel="stylesheet" href="USTUDY.css">
+    <!-- Google Fonts: Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <!-- Font Awesome để thêm icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>U.STUDY</h1>
+            </div>
+            <div class="header-right">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <i class="fas fa-bars"></i>
+                </label>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#lessons">Bài học</a></li>
+                    <li><a href="#revision">Ôn tập</a></li>
+                    <li><a href="#tests">Kiểm tra</a></li>
+                    <li><a href="#resources">Tài liệu</a></li>
+                    <li><a href="#community">Cộng đồng</a></li>
+                    <li class="theme-toggle">
+                        <label class="switch" id="theme-tooltip" title="Hệ thống">
+                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="container">
+                <div class="hero">
+                    <h2>Hiệu quả - Điểm cao - Tiến bộ</h2>
+                    <p>Học dễ dàng, ôn tập hiệu quả, tiến bộ mỗi ngày với không gian tri thức thân thiện!</p>
+                    <div class="search-wrapper">
+                        <input type="text" id="search-bar" placeholder="Tìm kiếm bài học, tài liệu...">
+                        <button onclick="searchContent()"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (Bài học, Ôn tập, Kiểm tra...) -->
+        <section id="features">
+            <div class="container">
+                <div class="features-grid">
+                    <!-- Card 1: Bài học -->
+                    <div class="feature-card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Bài học</h3>
+                        <p>Khám phá các bài học từ Tiểu học đến Đại học với nội dung dễ hiểu và ví dụ minh họa.</p>
+                        <a href="#lessons" class="btn">Xem ngay</a>
+                    </div>
+                    <!-- Card 2: Ôn tập -->
+                    <div class="feature-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>Ôn tập</h3>
+                        <p>Ôn lại kiến thức với bài tập trắc nghiệm, tự luận và flashcard thông minh.</p>
+                        <a href="#revision" class="btn">Bắt đầu ôn tập</a>
+                    </div>
+                    <!-- Card 3: Kiểm tra -->
+                    <div class="feature-card">
+                        <i class="fas fa-check-square"></i>
+                        <h3>Kiểm tra</h3>
+                        <p>Đánh giá năng lực với các bài kiểm tra ngắn và phân tích kết quả chi tiết.</p>
+                        <a href="#tests" class="btn">Làm bài ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 U.STUDY. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="USTUDY.js"></script>
+</body>
+</html>
