@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra - vie-learn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>vie-learn</h1>
+            </div>
+            <div class="header-right">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <i class="fas fa-bars"></i>
+                </label>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="lessons.html">Bài học</a></li>
+                    <li><a href="revision.html">Ôn tập</a></li>
+                    <li><a href="tests.html" class="active">Kiểm tra</a></li>
+                    <li><a href="resources.html">Tài liệu</a></li>
+                    <li><a href="community.html">Cộng đồng</a></li>
+                    <li class="theme-toggle">
+                        <label class="switch" id="theme-tooltip" title="Hệ thống">
+                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="tests">
+            <div class="container">
+                <h2>Kiểm tra</h2>
+                <p>Đánh giá năng lực với các bài kiểm tra ngắn và phân tích kết quả chi tiết.</p>
+                <div class="tests-grid">
+                    <div class="test-card">
+                        <h3>Kiểm tra 15 phút</h3>
+                        <p>Kiểm tra nhanh kiến thức cơ bản.</p>
+                        <a href="#" class="btn">Làm bài</a>
+                    </div>
+                    <div class="test-card">
+                        <h3>Kiểm tra 45 phút</h3>
+                        <p>Đánh giá toàn diện kiến thức.</p>
+                        <a href="#" class="btn">Làm bài</a>
+                    </div>
+                    <div class="test-card">
+                        <h3>Phân tích kết quả</h3>
+                        <p>Xem lại và cải thiện điểm yếu.</p>
+                        <a href="#" class="btn">Xem ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 vie-learn. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
