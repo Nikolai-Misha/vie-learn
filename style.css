@@ -48,28 +48,9 @@
     --search-icon-hover: #8b6c36;
 }
 
-/* Thêm transition cho màu sắc, shadow và transform */
-body, header, section, .feature-card, button, .btn, footer, .switch {
+/* Transition cho các phần tử */
+header, section, .feature-card, button, .btn, footer, .switch {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hiệu ứng trượt trang */
-body {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    overflow-x: hidden;
-}
-
-body.loaded {
-    transform: translateX(0);
-}
-
-html {
-    visibility: hidden;
-}
-
-html.loaded {
-    visibility: visible;
 }
 
 /* General Styles */
@@ -198,6 +179,9 @@ nav ul li a:hover {
     background-color: var(--toggle-knob-bg);
     transition: transform 0.3s ease;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 0.9rem;
@@ -227,14 +211,14 @@ main {
 }
 
 section {
-    padding: 3rem 0; /* Giảm padding cho màn hình nhỏ */
+    padding: 3rem 0;
 }
 
 /* Home Section */
 #home {
     background: linear-gradient(135deg, var(--header-bg) 0%, var(--background) 100%);
     text-align: center;
-    padding: 5rem 0; /* Giảm padding */
+    padding: 5rem 0;
 }
 
 .hero h2 {
@@ -302,8 +286,8 @@ button:hover i.fa-search {
 
 .features-grid, .lessons-grid, .revision-grid, .tests-grid, .resources-grid, .community-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Giảm kích thước tối thiểu */
-    gap: 1.5rem; /* Giảm khoảng cách */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
     padding: 1.5rem 0;
 }
 
@@ -468,7 +452,7 @@ footer p {
     }
 
     .features-grid, .lessons-grid, .revision-grid, .tests-grid, .resources-grid, .community-grid {
-        grid-template-columns: 1fr; /* Chỉ 1 cột trên màn hình nhỏ */
+        grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem 0;
     }
@@ -500,7 +484,7 @@ footer p {
     }
 
     nav {
-        top: 50px; /* Điều chỉnh cho header nhỏ hơn */
+        top: 50px;
     }
 
     #home {
@@ -569,7 +553,6 @@ footer p {
     }
 }
 
-/* Màn hình cực nhỏ (dưới 360px) */
 @media (max-width: 360px) {
     .logo h1 {
         font-size: 1.1rem;
