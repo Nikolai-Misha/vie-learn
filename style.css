@@ -19,12 +19,10 @@
     --accent-hover: #f7e377;
     --shadow: rgba(0, 0, 0, 0.3);
     --shadow-hover: rgba(0, 0, 0, 0.5);
-    /* Toggle switch */
     --toggle-off-bg: #E5E7EB;
     --toggle-on-bg: #4B5EAA;
     --toggle-knob-bg: #dbdbdb;
     --toggle-icon: #2C3E50;
-    /* Search icon */
     --search-icon: #2C3E50;
     --search-icon-hover: #8b6c36;
 }
@@ -42,12 +40,10 @@
     --accent-hover: #f1d010;
     --shadow: rgba(0, 0, 0, 0.4);
     --shadow-hover: rgba(0, 0, 0, 0.6);
-    /* Toggle switch */
     --toggle-off-bg: #E5E7EB;
     --toggle-on-bg: #4B5EAA;
     --toggle-knob-bg: #FFFFFF;
     --toggle-icon: #ffe48b;
-    /* Search icon */
     --search-icon: #F3F4F6;
     --search-icon-hover: #8b6c36;
 }
@@ -55,6 +51,25 @@
 /* Thêm transition cho màu sắc, shadow và transform */
 body, header, section, .feature-card, button, .btn, footer, .switch {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hiệu ứng trượt trang */
+body {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-x: hidden;
+}
+
+body.loaded {
+    transform: translateX(0);
+}
+
+html {
+    visibility: hidden;
+}
+
+html.loaded {
+    visibility: visible;
 }
 
 /* General Styles */
@@ -149,11 +164,10 @@ nav ul li a:hover {
     display: inline-block;
     width: 48px;
     height: 24px;
-    transition: transform 0.3s ease;
 }
 
 .switch:hover {
-    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+    transform: scale(1.05);
 }
 
 .switch input {
@@ -184,16 +198,12 @@ nav ul li a:hover {
     background-color: var(--toggle-knob-bg);
     transition: transform 0.3s ease;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 0.9rem;
     color: var(--toggle-icon);
 }
 
-/* Icon dựa trên trạng thái giao diện (data-theme) */
 [data-theme="light"] .slider:before {
     content: "\f185"; /* Icon mặt trời */
 }
@@ -217,28 +227,28 @@ main {
 }
 
 section {
-    padding: 4rem 0;
+    padding: 3rem 0; /* Giảm padding cho màn hình nhỏ */
 }
 
 /* Home Section */
 #home {
     background: linear-gradient(135deg, var(--header-bg) 0%, var(--background) 100%);
     text-align: center;
-    padding: 6rem 0;
+    padding: 5rem 0; /* Giảm padding */
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .search-wrapper {
@@ -248,19 +258,19 @@ section {
 }
 
 #search-bar {
-    padding: 0.8rem;
-    width: 50%;
-    max-width: 500px;
+    padding: 0.7rem;
+    width: 60%;
+    max-width: 400px;
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     background-color: var(--card-bg);
     box-shadow: inset 0 1px 3px var(--shadow);
     color: var(--text-primary);
 }
 
 button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     background-color: var(--accent);
     color: var(--text-primary);
     border: none;
@@ -290,61 +300,61 @@ button:hover i.fa-search {
     background-color: var(--section-bg);
 }
 
-.features-grid {
+.features-grid, .lessons-grid, .revision-grid, .tests-grid, .resources-grid, .community-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Giảm kích thước tối thiểu */
+    gap: 1.5rem; /* Giảm khoảng cách */
+    padding: 1.5rem 0;
 }
 
-.feature-card {
+.feature-card, .lesson-card, .revision-card, .test-card, .resource-card, .community-card {
     background-color: var(--card-bg);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 6px 12px var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
+.feature-card:hover, .lesson-card:hover, .revision-card:hover, .test-card:hover, .resource-card:hover, .community-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px var(--shadow-hover);
 }
 
 .feature-card i {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
-.feature-card h3 {
-    font-size: 1.4rem;
+.feature-card h3, .lesson-card h3, .revision-card h3, .test-card h3, .resource-card h3, .community-card h3 {
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
-.feature-card p {
-    font-size: 0.90rem;
-    font-weight: 515;
+.feature-card p, .lesson-card p, .revision-card p, .test-card p, .resource-card p, .community-card p {
+    font-size: 0.85rem;
+    font-weight: 500;
     color: var(--text-muted);
 }
 
 .btn {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     background-color: var(--accent);
-    color: #2C3E50; /* Màu chữ mặc định cho nút */
+    color: #2C3E50;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 2px 6px var(--shadow);
 }
 
 [data-theme="dark"] .btn {
-    color: #4B5563; /* Màu chữ dịu hơn trong dark mode */
+    color: #4B5563;
 }
 
 .btn:hover {
@@ -352,18 +362,35 @@ button:hover i.fa-search {
     box-shadow: 0 4px 10px var(--shadow-hover);
 }
 
+/* Subpage Section Headers */
+#lessons h2, #revision h2, #tests h2, #resources h2, #community h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#lessons p, #revision p, #tests p, #resources p, #community p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 /* Footer */
 footer {
     background-color: var(--header-bg);
     color: var(--text-primary);
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     flex-shrink: 0;
     box-shadow: 0 -4px 12px var(--shadow);
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 400;
 }
 
@@ -388,7 +415,7 @@ footer p {
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .nav-toggle:checked ~ nav {
@@ -401,15 +428,10 @@ footer p {
         text-align: center;
     }
 
-    nav ul li {
-        margin: 0;
-    }
-
     nav ul li a {
         display: block;
-        padding: 0.8rem 0;
-        font-size: 1.1rem;
-        font-weight: 500;
+        padding: 0.7rem 0;
+        font-size: 0.95rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -418,25 +440,25 @@ footer p {
     }
 
     #home {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
 
     .hero h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .search-wrapper {
         flex-direction: row;
-        gap: 0.5rem;
+        gap: 0.4rem;
     }
 
     #search-bar {
         width: 70%;
-        max-width: 300px;
+        max-width: 280px;
         padding: 0.6rem;
         font-size: 0.9rem;
     }
@@ -445,26 +467,26 @@ footer p {
         padding: 0.6rem 1rem;
     }
 
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .features-grid, .lessons-grid, .revision-grid, .tests-grid, .resources-grid, .community-grid {
+        grid-template-columns: 1fr; /* Chỉ 1 cột trên màn hình nhỏ */
+        gap: 1rem;
         padding: 1rem 0;
     }
 
-    .feature-card {
-        padding: 1.5rem;
+    .feature-card, .lesson-card, .revision-card, .test-card, .resource-card, .community-card {
+        padding: 1.2rem;
     }
 
     .feature-card i {
         font-size: 2rem;
     }
 
-    .feature-card h3 {
+    .feature-card h3, .lesson-card h3, .revision-card h3, .test-card h3, .resource-card h3, .community-card h3 {
         font-size: 1.2rem;
     }
 
-    .feature-card p {
-        font-size: 0.9rem;
+    .feature-card p, .lesson-card p, .revision-card p, .test-card p, .resource-card p, .community-card p {
+        font-size: 0.8rem;
     }
 }
 
@@ -473,8 +495,16 @@ footer p {
         font-size: 1.3rem;
     }
 
+    header {
+        padding: 0.8rem 0;
+    }
+
+    nav {
+        top: 50px; /* Điều chỉnh cho header nhỏ hơn */
+    }
+
     #home {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
 
     .hero h2 {
@@ -482,30 +512,38 @@ footer p {
     }
 
     .hero p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .search-wrapper {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.6rem;
     }
 
     #search-bar {
-        width: 100%;
+        width: 90%;
         max-width: none;
-        padding: 0.6rem;
-        font-size: 0.9rem;
+        padding: 0.5rem;
+        font-size: 0.85rem;
     }
 
     button {
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1.5rem;
     }
 
-    .features-grid {
-        padding: 0.5rem 0;
+    section {
+        padding: 2rem 0;
     }
 
-    .feature-card {
+    #lessons h2, #revision h2, #tests h2, #resources h2, #community h2 {
+        font-size: 1.8rem;
+    }
+
+    #lessons p, #revision p, #tests p, #resources p, #community p {
+        font-size: 0.95rem;
+    }
+
+    .feature-card, .lesson-card, .revision-card, .test-card, .resource-card, .community-card {
         padding: 1rem;
     }
 
@@ -513,20 +551,54 @@ footer p {
         font-size: 1.8rem;
     }
 
-    .feature-card h3 {
+    .feature-card h3, .lesson-card h3, .revision-card h3, .test-card h3, .resource-card h3, .community-card h3 {
         font-size: 1.1rem;
     }
 
-    .feature-card p {
-        font-size: 0.85rem;
+    .feature-card p, .lesson-card p, .revision-card p, .test-card p, .resource-card p, .community-card p {
+        font-size: 0.75rem;
     }
 
     .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
 
     footer p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Màn hình cực nhỏ (dưới 360px) */
+@media (max-width: 360px) {
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav-toggle-label {
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.6rem 0;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    #search-bar {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 0.4rem 1.2rem;
         font-size: 0.8rem;
     }
 }
